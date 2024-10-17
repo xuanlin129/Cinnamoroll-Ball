@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: #BBDDE7;
+  background: url('../images/bg.png') repeat-x center/cover;
+}
+
+#section01 {
+  width: 100%;
+  height: 100vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 50px; */
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 150px;
+  position: relative;
+}
+
+.rainbow {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+  width: 150%;
+  animation: float 2s ease-in-out infinite;
+}
+
+.machine {
+  width: 250px;
+  height: 150px;
+  background: #15AAE5;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.machine::before {
+  content: '';
+  width: 70%;
+  height: 5%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  z-index: 1;
+  border: 1px solid #9D835E;
+}
+
+.paper {
+  width: 70%;
+  height: 90%;
+  background: #fff;
+  color: #9D835E;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%) rotateX(90deg);
+  transform-origin: top;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px #333;
+}
+
+.paper div {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+}
+
+.paper div img {
+  width: 30%;
+}
+
+.getNumber {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  animation: btn 1s ease-in-out infinite;
+}
+
+.getNumber.active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-box-shadow: inset 0px 0px 8px #ccc;
+  box-shadow: inset 0px 0px 8px #ccc;
+  filter: brightness(0.7);
+  animation: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    top: -45%
+  }
+
+  50% {
+    top: -55%
+  }
+}
+
+@keyframes btn {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
