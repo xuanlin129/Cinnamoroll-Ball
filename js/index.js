@@ -1,3 +1,6 @@
+alert('活動已結束')
+document.write('')
+
 const getNumber = document.querySelector(".getNumber");
 const paper = document.querySelector(".paper");
 
