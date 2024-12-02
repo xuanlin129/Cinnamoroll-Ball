@@ -1,6 +1,6 @@
-alert('活動已結束')
 document.body.innerHTML = ``
 document.body.style.background = '#000'
+alert('活動已結束')
 
 const getNumber = document.querySelector(".getNumber");
 const paper = document.querySelector(".paper");
